@@ -3,7 +3,9 @@ It is derived from https://github.com/kelseyhightower/kubernetes-the-hard-way wi
 
 # Requirement
 Virtualbox installed
+
 git installed (eg: sudo apt-get install git)
+
 vagrant installed (eg: sudo apt-get install vagrant)
 
 Nodes:

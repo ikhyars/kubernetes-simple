@@ -2,7 +2,7 @@
 It is derived from [kubernetes-the-hard-way](https://github.com/kelseyhightower/kubernetes-the-hard-way) with some modification.
 
 # Requirement
-- [Virtualbox](https://www.virtualbox.org/wiki/Downloads) installed  
+- [Virtualbox](https://www.virtualbox.org/wiki/Downloads) installed  (eg: `sudo apt-get install virtualbox`)  
 - [git](https://git-scm.com/downloads/) installed (eg: `sudo apt-get install git`)  
 - [vagrant](https://www.vagrantup.com/downloads.html) installed (eg: `sudo apt-get install vagrant`)  
 

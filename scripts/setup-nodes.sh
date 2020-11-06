@@ -64,6 +64,7 @@ EOF
 chmod 600 /home/vagrant/.ssh/id_rsa
 
 # Install some important packages
+yum -y install wget
 wget http://mirror.centos.org/centos/7/os/x86_64/Packages/kernel-headers-3.10.0-1127.el7.x86_64.rpm
 wget http://mirror.centos.org/centos/7/os/x86_64/Packages/kernel-devel-3.10.0-1127.el7.x86_64.rpm
 wget http://download.virtualbox.org/virtualbox/6.1.14/VBoxGuestAdditions_6.1.14.iso

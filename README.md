@@ -22,11 +22,11 @@ Operating system: Centos7
 
 # Preparation
 Add below lines in your laptop's /etc/hosts  
->> 192.168.100.11  master-1
->> 192.168.100.12  master-2
->> 192.168.100.13  lb loadbalancer
->> 192.168.100.14  worker-1
->> 192.168.100.15  worker-2
+> 192.168.100.11  master-1  
+> 192.168.100.12  master-2  
+> 192.168.100.13  lb loadbalancer  
+> 192.168.100.14  worker-1  
+> 192.168.100.15  worker-2  
 
 Download the git sources using below command
 

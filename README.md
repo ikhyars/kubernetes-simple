@@ -2,13 +2,13 @@
 It is derived from https://github.com/kelseyhightower/kubernetes-the-hard-way with some modification
 
 # Requirement
-Virtualbox installed
+Virtualbox installed  
 
-git installed (eg: sudo apt-get install git)
+git installed (eg: sudo apt-get install git)  
 
-vagrant installed (eg: sudo apt-get install vagrant)
+vagrant installed (eg: sudo apt-get install vagrant)  
 
-Nodes:
+Nodes:  
 
 Hostname        vCPU      Memory
 
@@ -40,14 +40,14 @@ Add below lines in your laptop's /etc/hosts
 
 Download the git sources using below command
 
-$ cd ~
+$ cd ~  
 
-$ git clone https://github.com/ikhyars/kubernetes-simple.git
+$ git clone https://github.com/ikhyars/kubernetes-simple.git  
 
 
-Navigate to the directory
+Navigate to the directory  
 
-$ cd ~/kubernetes-simple/
+$ cd ~/kubernetes-simple/  
 
 
 # Provision and bring-up the VMs

@@ -62,12 +62,17 @@ etc.
 #### Login to master-1 & master-2 and run below command (parallel execution is possible)  
 > $ `./05-etcd.sh`  
 >> Expected output:  
->    
+>> 1a82afa2247e7562, started, master-2, https://192.168.100.12:2380, https://192.168.100.12:2379  
+>> b9a27230d536d1e8, started, master-1, https://192.168.100.11:2380, https://192.168.100.11:2379  
 
 #### Login to master-1 & master-2 and run below command (parallel execution is possible)  
 > $ `./06-bootstrap-controlplane.sh`  
 >> Expected output:  
->   
+>> NAME                 STATUS    MESSAGE             ERROR  
+>> controller-manager   Healthy   ok                    
+>> scheduler            Healthy   ok                    
+>> etcd-1               Healthy   {"health":"true"}     
+>> etcd-0               Healthy   {"health":"true"}     
 
 #### Login to loadbalancer and run below command
 > $ `./07-network-lb.sh`  

@@ -10,17 +10,13 @@ vagrant installed (eg: sudo apt-get install vagrant)
 
 Nodes:  
 
-Hostname        vCPU      Memory
-
-master-1        1         1024 MB
-
-master-2        1         1024 MB
-
-loadbalancer    1         512 MB
-
-worker-1        1         512 MB
-
-worker-2        1         512 MB
+| Hostname | vCPU | Memory |
+----------------------------------
+| master-1 | 1 | 1024 MB |
+| master-2 | 1 | 1024 MB |
+| loadbalancer | 1 | 512 MB |
+| worker-1 | 1 | 512 MB |
+| worker-2 | 1 | 512 MB |
 
 Operating system: Centos7
 

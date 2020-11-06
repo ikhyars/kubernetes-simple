@@ -2,13 +2,11 @@
 It is derived from https://github.com/kelseyhightower/kubernetes-the-hard-way with some modification
 
 # Requirement
-Virtualbox installed  
+- Virtualbox installed  
+- git installed (eg: sudo apt-get install git)  
+- vagrant installed (eg: sudo apt-get install vagrant)  
 
-git installed (eg: sudo apt-get install git)  
-
-vagrant installed (eg: sudo apt-get install vagrant)  
-
-Nodes:
+# Resources
 
 |Hostname|vCPU|Memory|
 |---|---|---|

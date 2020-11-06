@@ -8,7 +8,13 @@ git installed (eg: sudo apt-get install git)
 
 vagrant installed (eg: sudo apt-get install vagrant)  
 
-Nodes:  
+Nodes:
+
+|   |   |   |   |   |
+|---|---|---|---|---|
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
 
 | Hostname | vCPU | Memory |
 ----------------------------------

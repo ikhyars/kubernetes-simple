@@ -69,7 +69,7 @@ wget http://mirror.centos.org/centos/7/os/x86_64/Packages/kernel-headers-3.10.0-
 wget http://mirror.centos.org/centos/7/os/x86_64/Packages/kernel-devel-3.10.0-1127.el7.x86_64.rpm
 wget http://download.virtualbox.org/virtualbox/6.1.14/VBoxGuestAdditions_6.1.14.iso
 rpm -ivh kernel-headers-3.10.0-1127.el7.x86_64.rpm
-yum -y install net-tools wget gcc make perl ntp
+yum -y install net-tools gcc make perl ntp
 rpm -ivh kernel-devel-3.10.0-1127.el7.x86_64.rpm
 rm kernel-headers-3.10.0-1127.el7.x86_64.rpm kernel-devel-3.10.0-1127.el7.x86_64.rpm
 

@@ -47,10 +47,10 @@ etc.
 
 # Configuration
 
-## Login to master-1 & master-2 and run below command (parallel execution is possible)
+#### Login to master-1 & master-2 and run below command (parallel execution is possible)
 > $ `./01-kubclient.sh`  
   
-## Login to master-1 and run below command   
+#### Login to master-1 and run below command   
 > $ `./02-cert.sh`  
 
 

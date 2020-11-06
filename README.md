@@ -2,9 +2,9 @@
 It is derived from https://github.com/kelseyhightower/kubernetes-the-hard-way with some modification
 
 # Requirement
-- Virtualbox installed  
-- git installed (eg: `sudo apt-get install git`)  
-- vagrant installed (eg: `sudo apt-get install vagrant`)  
+- Virtualbox (https://www.virtualbox.org/wiki/Downloads) installed  
+- git (https://git-scm.com/downloads/) installed (eg: `sudo apt-get install git`)  
+- vagrant (https://www.vagrantup.com/downloads.html) installed (eg: `sudo apt-get install vagrant`)  
 
 # Resources
 

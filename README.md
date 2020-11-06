@@ -26,17 +26,12 @@ Add below lines in your laptop's /etc/hosts
 > 192.168.100.14  worker-1  
 > 192.168.100.15  worker-2  
 
-Download the git sources using below command
-
-$ cd ~  
-
-$ git clone https://github.com/ikhyars/kubernetes-simple.git  
-
-
+Download the git sources using below command  
+> $ cd ~  
+> $ git clone https://github.com/ikhyars/kubernetes-simple.git  
+  
 Navigate to the directory  
-
-$ cd ~/kubernetes-simple/  
-
+> $ cd ~/kubernetes-simple/  
 
 # Provision and bring-up the VMs
 

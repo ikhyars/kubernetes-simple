@@ -53,20 +53,14 @@ etc.
 #### Login to master-1 and run below command   
 > $ `./02-cert.sh`  
 
+#### Login to master-1 and run below command  
+> $ `./03-kubeconfig.sh`  
 
-Login to master-1 and run below command 
+#### Login to master-1 and run below command  
+> $ `./04-dataencrypt.sh`  
 
-$ ./03-kubeconfig.sh
-
-
-Login to master-1 and run below command 
-
-$ ./04-dataencrypt.sh
-
-
-Login to master-1 & master-2 and run below command (parallel execution is possible)
-
-$ ./05-etcd.sh
+#### Login to master-1 & master-2 and run below command (parallel execution is possible)  
+> $ `./05-etcd.sh`  
 
 
 Expected output:
@@ -75,9 +69,8 @@ Expected output:
 
 54a5796a6803f252, started, master-1, https://192.168.100.11:2380, https://192.168.100.11:2379
 
-Login to master-1 & master-2 and run below command (parallel execution is possible)
-
-$ ./06-bootstrap-controlplane.sh
+#### Login to master-1 & master-2 and run below command (parallel execution is possible)  
+> $ `./06-bootstrap-controlplane.sh`  
 
 
 Expected output:

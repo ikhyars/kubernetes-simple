@@ -1,5 +1,5 @@
 # Introduction
-It is derived from https://github.com/kelseyhightower/kubernetes-the-hard-way with some modification
+It is derived from [kubernetes-the-hard-way](https://github.com/kelseyhightower/kubernetes-the-hard-way) with some modification.
 
 # Requirement
 - [Virtualbox](https://www.virtualbox.org/wiki/Downloads) installed  

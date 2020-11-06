@@ -77,7 +77,17 @@ etc.
 #### Login to loadbalancer and run below command
 > $ `./07-network-lb.sh`  
 >> Expected output:  
->   
+>> {  
+>>  "major": "1",  
+>>  "minor": "13",  
+>>  "gitVersion": "v1.13.0",  
+>>  "gitCommit": "ddf47ac13c1a9483ea035a79cd7c10005ff21a6d",  
+>>  "gitTreeState": "clean",  
+>>  "buildDate": "2018-12-03T20:56:12Z",  
+>>  "goVersion": "go1.11.2",  
+>>  "compiler": "gc",  
+>>  "platform": "linux/amd64"  
+>> }     
 
 #### Login to master-1 and run below command 
 > $ `./08-bootstrap-worker.sh`
@@ -88,17 +98,26 @@ etc.
 #### Login to master-1 and run below command 
 > $ `kubectl get nodes --kubeconfig admin.kubeconfig`
 >> Expected output:  
->  
+>> NAME       STATUS     ROLES    AGE   VERSION  
+>> worker-1   NotReady   <none>   45s   v1.13.0  
+>> worker-2   NotReady   <none>   46s   v1.13.0   
 
 #### Login to master-1 and run below command 
 > $ `./10-config-kubectl.sh`  
 > $ `kubectl get componentstatuses`  
 >> Expected output:  
->    
+>> NAME                 STATUS    MESSAGE             ERROR  
+>> controller-manager   Healthy   ok                    
+>> scheduler            Healthy   ok                    
+>> etcd-1               Healthy   {"health":"true"}     
+>> etcd-0               Healthy   {"health":"true"}   
+  
 > `$ kubectl get nodes --kubeconfig admin.kubeconfig`  
 >> Expected output:  
->    
-
+>> NAME       STATUS     ROLES    AGE   VERSION  
+>> worker-1   NotReady   <none>   45s   v1.13.0  
+>> worker-2   NotReady   <none>   46s   v1.13.0     
+  
 #### Login to worker-1 & worker-2 and run below command (parallel execution is possible)
 > $ `./11-config-podnetwork.sh`
 
@@ -106,13 +125,23 @@ etc.
 > $ `kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | tr -d '\n')"`  
 > $ `kubectl get pods -n kube-system`  
 >> Expected output:    
->  
+>> NAME              READY   STATUS    RESTARTS   AGE  
+>> weave-net-k9qcb   2/2     Running   0          56s  
+>> weave-net-sjjbn   2/2     Running   0          56s  
+  
 > $ `kubectl get componentstatuses`  
 >> Expected output:  
->  
+>> NAME                 STATUS    MESSAGE             ERROR  
+>> controller-manager   Healthy   ok                    
+>> scheduler            Healthy   ok                    
+>> etcd-1               Healthy   {"health":"true"}     
+>> etcd-0               Healthy   {"health":"true"}   
+
 > $ `kubectl get nodes --kubeconfig admin.kubeconfig`  
 >> Expected output:  
->    
+>> NAME       STATUS   ROLES    AGE     VERSION  
+>> worker-1   Ready    <none>   5m10s   v1.13.0  
+>> worker-2   Ready    <none>   5m11s   v1.13.0  
 
 #### Login to master-1 and run below command 
 > $ `./12-apiserver-to-kubelet.sh`
@@ -123,16 +152,35 @@ etc.
 > $ `kubectl apply -f nginx-service.yaml`  
 > $ `kubectl get pods -n kube-system`  
 >> Expected output:  
->    
+>> NAME                       READY   STATUS    RESTARTS   AGE  
+>> coredns-69cbb76ff8-fj4sz   1/1     Running   0          21s  
+>> coredns-69cbb76ff8-tm6q6   1/1     Running   0          21s  
+>> weave-net-k9qcb            2/2     Running   0          3m6s  
+>> weave-net-sjjbn            2/2     Running   0          3m6s  
+   
 > $ `kubectl get pods -l k8s-app=kube-dns -n kube-system`  
 >> Expected output:    
->  
+>> NAME                       READY   STATUS    RESTARTS   AGE  
+>> coredns-69cbb76ff8-fj4sz   1/1     Running   0          58s  
+>> coredns-69cbb76ff8-tm6q6   1/1     Running   0          58s  
+
 > $ `kubectl get componentstatuses`  
 >> Expected output:  
->  
+>> NAME                 STATUS    MESSAGE             ERROR  
+>> controller-manager   Healthy   ok                    
+>> scheduler            Healthy   ok                    
+>> etcd-1               Healthy   {"health":"true"}     
+>> etcd-0               Healthy   {"health":"true"}  
+
 > $ `kubectl get nodes --kubeconfig admin.kubeconfig`  
 >> Expected output:  
->  
+>> NAME       STATUS   ROLES    AGE     VERSION  
+>> worker-1   Ready    <none>   5m10s   v1.13.0  
+>> worker-2   Ready    <none>   5m11s   v1.13.0  
+
 > $ `kubectl get services`  
 >> Expected output:  
->    
+>> NAME         TYPE           CLUSTER-IP    EXTERNAL-IP   PORT(S)        AGE  
+>> kubernetes   ClusterIP      10.96.0.1     <none>        443/TCP        15m  
+>> nginx        LoadBalancer   10.96.0.225   <pending>     80:30754/TCP   2m3s  
+

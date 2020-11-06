@@ -16,7 +16,12 @@ It is derived from [kubernetes-the-hard-way](https://github.com/kelseyhightower/
 |worker-1|1|512 MB|
 |worker-2|1|512 MB|
 
-Operating system: Centos 7
+# Software Version
+Operating system: Centos 7  
+Kubernetes v1.13.0  
+Etcd v3.3.9  
+haproxy 1.5.18-9  
+cni-plugins v0.7.5  
 
 # Preparation
 Add below lines in your laptop's /etc/hosts  

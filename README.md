@@ -62,15 +62,18 @@ etc.
 #### Login to master-1 & master-2 and run below command (parallel execution is possible)  
 > $ `./05-etcd.sh`  
 >> Expected output:  
-<<  
+>    
+
 #### Login to master-1 & master-2 and run below command (parallel execution is possible)  
 > $ `./06-bootstrap-controlplane.sh`  
 >> Expected output:  
-<<  
+>   
+
 #### Login to loadbalancer and run below command
 > $ `./07-network-lb.sh`  
 >> Expected output:  
-<<  
+>   
+
 #### Login to master-1 and run below command 
 > $ `./08-bootstrap-worker.sh`
 
@@ -80,50 +83,51 @@ etc.
 #### Login to master-1 and run below command 
 > $ `kubectl get nodes --kubeconfig admin.kubeconfig`
 >> Expected output:  
-<<  
+>  
+
 #### Login to master-1 and run below command 
 > $ `./10-config-kubectl.sh`  
 > $ `kubectl get componentstatuses`  
 >> Expected output:  
-<<  
-> `$ kubectl get nodes --kubeconfig admin.kubeconfig`
+>    
+> `$ kubectl get nodes --kubeconfig admin.kubeconfig`  
 >> Expected output:  
-<<  
+>    
 
 #### Login to worker-1 & worker-2 and run below command (parallel execution is possible)
 > $ `./11-config-podnetwork.sh`
 
 #### Login to master-1 and run below command 
-> $ `kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | tr -d '\n')"`
-> $ `kubectl get pods -n kube-system`
+> $ `kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | tr -d '\n')"`  
+> $ `kubectl get pods -n kube-system`  
+>> Expected output:    
+>  
+> $ `kubectl get componentstatuses`  
 >> Expected output:  
-<<  
-> $ `kubectl get componentstatuses`
+>  
+> $ `kubectl get nodes --kubeconfig admin.kubeconfig`  
 >> Expected output:  
-<<  
-> $ `kubectl get nodes --kubeconfig admin.kubeconfig`
->> Expected output:  
-<<  
+>    
 
 #### Login to master-1 and run below command 
 > $ `./12-apiserver-to-kubelet.sh`
 
-#### Login to master-1 and run below command 
-> $ `kubectl apply -f coredns.yaml`
-> $ `kubectl apply -f nginx-deployment.yaml`
-> $ `kubectl apply -f nginx-service.yaml`
-> $ `kubectl get pods -n kube-system`
+#### Login to master-1 and run below command   
+> $ `kubectl apply -f coredns.yaml`  
+> $ `kubectl apply -f nginx-deployment.yaml`  
+> $ `kubectl apply -f nginx-service.yaml`  
+> $ `kubectl get pods -n kube-system`  
 >> Expected output:  
-<<  
-> $ `kubectl get pods -l k8s-app=kube-dns -n kube-system`
+>    
+> $ `kubectl get pods -l k8s-app=kube-dns -n kube-system`  
+>> Expected output:    
+>  
+> $ `kubectl get componentstatuses`  
 >> Expected output:  
-<<  
-> $ `kubectl get componentstatuses`
+>  
+> $ `kubectl get nodes --kubeconfig admin.kubeconfig`  
 >> Expected output:  
-<<  
-> $ `kubectl get nodes --kubeconfig admin.kubeconfig`
+>  
+> $ `kubectl get services`  
 >> Expected output:  
-<<  
-> $ `kubectl get services`
->> Expected output:  
-<<  
+>    

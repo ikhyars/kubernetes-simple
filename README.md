@@ -13,7 +13,6 @@ vagrant up
 
 add below lines in your laptop's /etc/hosts
 
-# kubernetes simple
 192.168.100.11  master-1
 192.168.100.12  master-2
 192.168.100.13  lb loadbalancer

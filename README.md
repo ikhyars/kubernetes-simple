@@ -1,9 +1,15 @@
 # kubernetes-simple
 Derived from https://github.com/kelseyhightower/kubernetes-the-hard-way with some modification
 
+# Requirement
+Virtualbox installed
+git installed (sudo apt-get install git)
+vagrant installed (sudo apt-get install vagrant)
+
+
 # Preparation
-sudo apt-get install git
-sudo apt-get install vagrant
+
+
 
 git clone https://github.com/ikhyars/kubernetes-simple.git
 

@@ -10,7 +10,7 @@ vagrant installed (eg: sudo apt-get install vagrant)
 
 Nodes:
 
-Hostname       VCPU  Memory
+Hostname       vCPU  Memory
 
 master-1       1     1024 MB
 

@@ -40,7 +40,6 @@ Navigate to the directory
 > $ `cd ~/kubernetes-simple/`  
 
 # Provision and bring-up the VMs
-
 > $ `vagrant up`  
 
 Once all VMs have been UP and running, please do ssh to nodes using username/password: vagrant/vagrant123  
@@ -190,3 +189,10 @@ etc.
 >> kubernetes   ClusterIP      10.96.0.1     <none>        443/TCP        15m  
 >> nginx        LoadBalancer   10.96.0.225   <pending>     80:30754/TCP   2m3s  
 
+# De-provision the system
+If you want to destroy all created VMs above, please do following in your laptop
+> $ `vagrant destroy`  
+  
+Remove the `.vagrant` directory as well  
+> $ `cd ~/kubernetes-simple/`  
+> $ `rm -rf .vagrant`  

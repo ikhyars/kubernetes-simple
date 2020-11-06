@@ -16,7 +16,7 @@ It is derived from [kubernetes-the-hard-way](https://github.com/kelseyhightower/
 |worker-1|1|512 MB|
 |worker-2|1|512 MB|
 
-Operating system: Centos7
+Operating system: Centos 7
 
 # Preparation
 Add below lines in your laptop's /etc/hosts  

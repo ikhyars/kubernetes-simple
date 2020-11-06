@@ -3,8 +3,8 @@ It is derived from https://github.com/kelseyhightower/kubernetes-the-hard-way wi
 
 # Requirement
 - Virtualbox installed  
-- git installed (eg: sudo apt-get install git)  
-- vagrant installed (eg: sudo apt-get install vagrant)  
+- git installed (eg: `sudo apt-get install git`)  
+- vagrant installed (eg: `sudo apt-get install vagrant`)  
 
 # Resources
 
@@ -27,25 +27,21 @@ Add below lines in your laptop's /etc/hosts
 > 192.168.100.15  worker-2  
 
 Download the git sources using below command  
-> $ cd ~  
-> $ git clone https://github.com/ikhyars/kubernetes-simple.git  
+> $ `cd ~`   
+> $ `git clone https://github.com/ikhyars/kubernetes-simple.git`  
   
 Navigate to the directory  
-> $ cd ~/kubernetes-simple/  
+> $ `cd ~/kubernetes-simple/`  
 
 # Provision and bring-up the VMs
 
-$ vagrant up
+> $ `vagrant up`  
 
-Once all VMs have been UP and running, please do ssh to nodes using username/password: vagrant/vagrant123
-
-example:
-
-ssh vagrant@master-1
-
-ssh vagrant@loadbalancer
-
-ssh vagrant@worker-1
+Once all VMs have been UP and running, please do ssh to nodes using username/password: vagrant/vagrant123  
+example:  
+- `ssh vagrant@master-1`  
+- `ssh vagrant@loadbalancer`  
+- `ssh vagrant@worker-2`  
 
 etc.
 
